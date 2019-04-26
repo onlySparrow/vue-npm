@@ -1,6 +1,46 @@
-# 欢迎使用 todolist
+## vue cli2.0 创建组建发布到npm
+
+1. down下代码地址:[https://github.com/onlySparrow/vue-npm.git](https://github.com/onlySparrow/vue-npm.git)
+2. 执行命令安装依赖 npm install
+3. 打开 package.json进行如下操作
+   ```json
+{
+	"name": "npmcomponentdemo",//添加项目名称并保证在npm中是唯一的
+	"description": "a vue component of todolist",
+	"version": "0.1.0",
+	"private": false,
+	"main": "./dist/todoList.min.js",
+	"scripts": {
+		"dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+		"build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+	},
+	"dependencies": {
+		"vue": "^2.5.11",
+		"vue-todolist": "^1.0.3"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not ie <= 8"
+	],
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"babel-preset-env": "^1.6.0",
+		"babel-preset-stage-3": "^6.24.1",
+		"cross-env": "^5.0.5",
+		"css-loader": "^0.28.7",
+		"file-loader": "^1.1.4",
+		"vue-loader": "^13.0.5",
+		"vue-template-compiler": "^2.4.4",
+		"webpack": "^3.6.0",
+		"webpack-dev-server": "^2.9.1"
+	}
+}
+```
 
 
+## 使用 todolist
 ## Install
 ```shell
 npm install npmcomponentdemo -S
